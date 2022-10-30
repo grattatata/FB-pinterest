@@ -7,27 +7,33 @@ const Header = () => {
   return (
     <>
       <HeadContainer>
-        <Logo
-          src={require("../image/Logo.png")}
+        <HeaderBox>
+          <Logo
+            src={require("../image/Logo.png")}
+            onClick={() => {
+              navigate("/post");
+            }}
+          />
+          <HomeBtnBox
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            <HeaderHome>홈</HeaderHome>
+          </HomeBtnBox>
+          <PostBtnBox
+            onClick={() => {
+              navigate("/upload");
+            }}
+          >
+            <HeaderPost>만들기</HeaderPost>
+          </PostBtnBox>
+        </HeaderBox>
+        <ProfileBox
           onClick={() => {
-            navigate("/post");
-          }}
-        />
-        <HomeBtnBox
-          onClick={() => {
-            navigate("/");
+            navigate("/mypage");
           }}
         >
-          <HeaderHome>홈</HeaderHome>
-        </HomeBtnBox>
-        <PostBtnBox
-          onClick={() => {
-            navigate("/upload");
-          }}
-        >
-          <HeaderPost>만들기</HeaderPost>
-        </PostBtnBox>
-        <ProfileBox>
           <p>프로필</p>
         </ProfileBox>
       </HeadContainer>
@@ -39,7 +45,7 @@ export default Header;
 
 const HeadContainer = styled.header`
   display: flex;
-  width: 100%;
+  width: 100vw;
   align-items: center;
   height: 74px;
   background-color: white;
@@ -48,6 +54,9 @@ const HeadContainer = styled.header`
   /* position: fixed; */
 `;
 
+const HeaderBox = styled.div`
+  display: flex;
+`;
 const Logo = styled.img`
   margin-left: 10px;
   height: 40px;
@@ -76,7 +85,6 @@ const HeaderHome = styled.span`
 `;
 
 const PostBtnBox = styled.div`
-  margin: 0 10px;
   height: 40px;
   width: 70px;
   display: flex;
@@ -93,4 +101,5 @@ const HeaderPost = styled.span`
 
 const ProfileBox = styled.div`
   float: right;
+  cursor: pointer;
 `;

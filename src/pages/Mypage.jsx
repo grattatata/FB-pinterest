@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import Layout from "../components/Layout";
 
-const Main = () => {
+const Mypage = () => {
   return <Layout></Layout>;
 };
 
-export default Main;
+export default Mypage;

@@ -5,7 +5,7 @@ import Layout from "../components/Layout";
 const Post = () => {
   return (
     <Layout>
-      <PostMain>글이 왜 안보이냐?</PostMain>
+      <PostMain>{}</PostMain>
     </Layout>
   );
 };
