@@ -6,7 +6,7 @@ const Main = () => {
   return (
     <Layout>
       <Maincontainer>
-        <Posts>호에엥</Posts>
+        <Posts>메인페이지</Posts>
       </Maincontainer>
     </Layout>
   );
