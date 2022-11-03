@@ -5,39 +5,37 @@ import styled from "styled-components";
 const Header = () => {
   const navigate = useNavigate();
   return (
-    <>
-      <HeadContainer>
-        <HeaderBox>
-          <Logo
-            src={require("../image/Logo.png")}
-            onClick={() => {
-              navigate("/post");
-            }}
-          />
-          <HomeBtnBox
-            onClick={() => {
-              navigate("/");
-            }}
-          >
-            <HeaderHome>홈</HeaderHome>
-          </HomeBtnBox>
-          <PostBtnBox
-            onClick={() => {
-              navigate("/upload");
-            }}
-          >
-            <HeaderPost>만들기</HeaderPost>
-          </PostBtnBox>
-        </HeaderBox>
-        <ProfileBox
+    <HeadContainer>
+      <HeaderBox>
+        <Logo
+          src={require("../image/Logo.png")}
           onClick={() => {
-            navigate("/mypage");
+            navigate("/post");
+          }}
+        />
+        <HomeBtnBox
+          onClick={() => {
+            navigate("/");
           }}
         >
-          <p>프로필</p>
-        </ProfileBox>
-      </HeadContainer>
-    </>
+          <HeaderHome>홈</HeaderHome>
+        </HomeBtnBox>
+        <PostBtnBox
+          onClick={() => {
+            navigate("/upload");
+          }}
+        >
+          <HeaderPost>만들기</HeaderPost>
+        </PostBtnBox>
+      </HeaderBox>
+      <ProfileBox
+        onClick={() => {
+          navigate("/mypage");
+        }}
+      >
+        <p>프로필</p>
+      </ProfileBox>
+    </HeadContainer>
   );
 };
 
@@ -49,7 +47,7 @@ const HeadContainer = styled.header`
   align-items: center;
   height: 74px;
   background-color: white;
-  border-bottom: 1px solid black;
+  /* border-bottom: 1px solid black; */
   padding: 0 5px;
   /* position: fixed; */
 `;
